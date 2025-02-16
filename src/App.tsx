@@ -1,6 +1,6 @@
 import { Route, Routes, useNavigate } from 'react-router-dom'
 import { LiveVideo } from './assets/components/LiveVideo'
-import { ConnectForm } from './assets/components/ConnectForm';
+import { ConnectForm } from '@components/ConnectForm'
 import './App.css'
 
 import AgoraRTC, {
@@ -22,6 +22,7 @@ function App() {
       <Route path='/via/:channelName' element={
         <AgoraRTCProvider client={agoraClient}>
           <LiveVideo />
+          <ConnectForm/>
         </AgoraRTCProvider>
       } />
     </Routes>
